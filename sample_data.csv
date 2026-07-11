@@ -1,0 +1,16 @@
+Transaction_ID,Age,Category,Product,Sales,Date
+1,25,Electronics,Laptop,1200,2023-01-15
+2,34,Clothing,T-Shirt,25,2023-01-16
+3,28,Electronics,Smartphone,800,2023-01-17
+4,45,Home,Desk,150,2023-01-18
+5,30,Electronics,Laptop,1200,2023-01-19
+6,22,Clothing,Jeans,60,2023-01-20
+7,38,Home,Chair,85,2023-01-21
+8,50,Electronics,Tablet,300,2023-01-22
+9,29,Clothing,Sneakers,95,2023-01-23
+10,41,Home,Lamp,45,2023-01-24
+11,26,Electronics,Smartphone,800,2023-01-25
+12,33,Clothing,T-Shirt,25,2023-01-26
+13,48,Electronics,TV,1500,2023-01-27
+14,31,Home,Sofa,600,2023-01-28
+15,27,Clothing,Jacket,120,2023-01-29

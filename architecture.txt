@@ -1,0 +1,45 @@
+Architecture Diagram: AI Data Analysis Assistant
+================================================
+
+[ User Interface (Frontend) ]
+        |
+        |--- Uploads Dataset (.csv, .xlsx, .json, .parquet)
+        |--- Views Charts & Statistics
+        |--- Asks Questions via Chatbot Popover
+        |--- Exports PDF Reports
+        v
+[ Streamlit Server (main.py) ]
+        |
+        |--- Session State Management (Caches answers, charts, dataset info)
+        |--- Routing & Layout (Sidebar, Tabs, Expander Details)
+        v
+[ Data Processing Engine (analysis.py) ]
+        |
+        |--- Pandas & NumPy
+        |--- Validates file formats and extracts Schema, Missing Values, Data Types
+        |--- Calculates Min, Max, Mean, Frequencies mathematically (No LLM hallucinations)
+        v
+[ Visualization Engine (visualization.py) ]
+        |
+        |--- Plotly Express
+        |--- Generates Interactive HTML Charts (Bar, Pie, Histograms, Correlation)
+        v
+[ AI Context & Orchestration Engine (ai_helper.py) ]
+        |
+        |--- LangChain & Prompt Engineering
+        |--- Formats exact Dataset Stats & User Question into a strict Prompt
+        |
+        +-----> [ Azure OpenAI LLM ] (External API)
+        |           - Reads statistical context (ground truth)
+        |           - Returns highly accurate natural language insights
+        |
+[ Export & Reporting Module ]
+        |
+        |--- FPDF2 & Textwrap
+        |--- Filters Unicode/Emojis safely
+        |--- Generates downloadable PDF reports with data & insights
+        
+================================================
+Containerization
+================================================
+[ Docker Engine ] -> Builds from Dockerfile -> Runs isolated Python 3.11 environment exposing port 8501.
